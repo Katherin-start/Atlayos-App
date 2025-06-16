@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Menú - Monitor de Recursos{% endblock %}</title>
+
+    <!-- Fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+ <style>
+    /* Loader ultra premium para Atlayos */
+    #loader {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(ellipse at center, #0a0a12 0%, #050508 100%);
+        z-index: 9999;
+        transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+    
+    #loader::before {
+        content: '';
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: radial-gradient(circle, rgba(0, 212, 255, 0.03) 0%, transparent 70%);
+        animation: pulse 8s infinite alternate;
+    }
+    
+    .logo-container {
+        position: relative;
+        width: 240px;
+        height: 240px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo-icon {
+        width: 180px;
+        height: 180px;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
+        animation: logo-pulse 3s ease-in-out infinite;
+    }
+    
+    /* Diseño del icono de monitoreo de carga */
+    .logo-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .circuit-ring {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px dashed rgba(0, 212, 255, 0.4);
+        animation: spin 60s linear infinite;
+    }
+    
+    .ring-1 {
+        width: 240px;
+        height: 240px;
+        top: 0;
+        left: 0;
+    }
+    
+    .ring-2 {
+        width: 200px;
+        height: 200px;
+        top: 20px;
+        left: 20px;
+        animation-direction: reverse;
+        animation-duration: 40s;
+    }
+    
+    .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    
+    .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #00d4ff;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 6px #00d4ff);
+        opacity: 0;
+        animation: particle-rotate 4s linear infinite;
+    }
+    
+    .loading-text {
+        margin-top: 25px;
+        color: #00d4ff;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #00d4ff;
+        animation: text-pulse 2.5s infinite alternate;
+    }
+    
+    .tech-stats {
+        display: flex;
+        gap: 30px;
+        margin-top: 25px;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-value {
+        color: #00d4ff;
+        font-family: 'Courier New', monospace;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-shadow: 0 0 8px rgba(0, 212, 255, 0.7);
+    }
+    
+    .stat-label {
+        color: rgba(0, 212, 255, 0.7);
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        margin-top: 3px;
+        text-transform: uppercase;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(0.8); opacity: 0.2; }
+        100% { transform: scale(1.3); opacity: 0.5; }
+    }
+    
+    @keyframes logo-pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+    }
+    
+    @keyframes text-pulse {
+        0% { opacity: 0.7; text-shadow: 0 0 10px #00d4ff; }
+        100% { opacity: 1; text-shadow: 0 0 20px #00d4ff, 0 0 30px #0077ff; }
+    }
+    
+    @keyframes particle-rotate {
+        0% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); opacity: 0; }
+    }
+    
+    #loader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    body {
+        background: #0a0a12 !important;
+        overflow: hidden;
+    }
+</style>
+<!-- Loader ultra premium para Atlayos -->
+ <!-- Loader premium con icono de monitoreo -->
+<div id="loader">
+    <div class="logo-container">
+        <div class="circuit-ring ring-1"></div>
+        <div class="circuit-ring ring-2"></div>
+        
+        <!-- Icono de monitoreo de carga personalizado -->
+        <div class="logo-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fondo del icono -->
+                <circle cx="50" cy="50" r="45" fill="#050508" stroke="#00d4ff" stroke-width="1.5" stroke-opacity="0.3"/>
+                
+                <!-- Diseño tipo dashboard de monitoreo -->
+                <path d="M50 10 L50 30 M50 70 L50 90 M10 50 L30 50 M70 50 L90 50" 
+                      stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-opacity="0.7"/>
+                
+                <!-- Gráfico de carga -->
+                <path d="M30 60 Q40 45 50 50 Q60 55 70 40" 
+                      stroke="#00d4ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+                
+                <!-- Indicadores de nivel -->
+                <rect x="35" y="65" width="4" height="15" rx="1" fill="#00d4ff" opacity="0.8"/>
+                <rect x="45" y="60" width="4" height="20" rx="1" fill="#00d4ff" opacity="0.9"/>
+                <rect x="55" y="55" width="4" height="25" rx="1" fill="#00d4ff"/>
+                
+                <!-- Centro tecnológico -->
+                <circle cx="50" cy="50" r="8" fill="none" stroke="#00d4ff" stroke-width="2" stroke-dasharray="2,2"/>
+                <circle cx="50" cy="50" r="4" fill="#00d4ff" filter="url(#glow)"/>
+                
+                <!-- Efecto de brillo -->
+                <defs>
+                    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="2" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="particles" id="particles-container"></div>
+    </div>
+    
+    <div class="loading-text">ATLAYOS</div>
+    
+    <div class="tech-stats">
+        <div class="stat-item">
+            <div class="stat-value" id="load-value">87%</div>
+            <div class="stat-label">CARGA ACTUAL</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="speed-value">4.8Gb/s</div>
+            <div class="stat-label">VELOCIDAD</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="nodes-value">24</div>
+            <div class="stat-label">NODOS</div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="panel-header">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" />
+            <h1>Monitor de Recursos</h1>
+            <p>Sistema de monitoreo en tiempo real</p>
+        </div>
+
+        {% block content %}
+        <div class="row g-5">
+
+            <div class="col-md-4">
+                <a href="{{ url_for('index') }}" class="text-decoration-none" aria-label="Monitor del Sistema" data-bs-toggle="tooltip" data-bs-placement="top" title="Visualiza el rendimiento en tiempo real">
+                    <div class="menu-card" role="button" tabindex="0">
+                        <i class="bi bi-speedometer2 menu-icon" aria-hidden="true"></i>
+                        <h3>Monitor del Sistema</h3>
+                        <p>Visualiza el rendimiento de CPU, memoria, disco y red en tiempo real.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{{ url_for('apps_page') }}" class="text-decoration-none" aria-label="Gestión de Procesos" data-bs-toggle="tooltip" data-bs-placement="top" title="Administra procesos y recursos">
+                    <div class="menu-card" role="button" tabindex="0">
+                        <i class="bi bi-list-task menu-icon" aria-hidden="true"></i>
+                        <h3>Gestión de Aplicaciones</h3>
+                        <p>Administra Aplicaciones en ejecución y su consumo de recursos.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{{ url_for('configuracion') }}" class="text-decoration-none" aria-label="Configuración" data-bs-toggle="tooltip" data-bs-placement="top" title="Ajusta parámetros del sistema">
+                    <div class="menu-card" role="button" tabindex="0">
+                        <i class="bi bi-gear menu-icon" aria-hidden="true"></i>
+                        <h3>Configuración</h3>
+                        <p>Ajusta los parámetros del sistema de monitoreo.</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        {% endblock %}
+
+        <footer>
+            © 2025 Monitor de Recursos | Versión 1.0
+        </footer>
+    </div>
+  
+        <!-- ...existing code... -->
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // Crear partículas dinámicas
+        const container = document.getElementById('particles-container');
+        for (let i = 0; i < 12; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.animationDelay = `${i * 0.3}s`;
+            container.appendChild(particle);
+        }
+        
+        // Animación de stats
+        const stats = {
+            load: { target: 87, current: 0, element: document.getElementById('load-value') },
+            speed: { target: 4.8, current: 0, element: document.getElementById('speed-value') },
+            nodes: { target: 24, current: 0, element: document.getElementById('nodes-value') }
+        };
+        
+        const statInterval = setInterval(() => {
+            let allComplete = true;
+            
+            for (const key in stats) {
+                const stat = stats[key];
+                if (stat.current < stat.target) {
+                    stat.current = Math.min(stat.current + (stat.target / 20), stat.target);
+                    stat.element.textContent = key === 'speed' 
+                        ? stat.current.toFixed(1) + 'Gb/s' 
+                        : key === 'load' 
+                            ? Math.round(stat.current) + '%' 
+                            : Math.round(stat.current);
+                    allComplete = false;
+                }
+            }
+            
+            if (allComplete) clearInterval(statInterval);
+        }, 100);
+        
+        setTimeout(function() {
+            document.getElementById('loader').classList.add('fade-out');
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 1500);
+        }, 3000);
+    });
+</script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Inicializar tooltips -->
+     
+    <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
+    {% block extra_js %}
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% endblock %}
+
+</body>
+</html>

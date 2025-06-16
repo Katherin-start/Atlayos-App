@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones Instaladas</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1><i class="fas fa-boxes"></i> Aplicaciones Instaladas</h1>
+            <a href="/" class="dashboard-link"><i class="fas fa-tachometer-alt"></i> Volver al Dashboard</a>
+        </div>
+
+        <div class="apps-controls">
+            <div class="search-box">
+                <input type="text" id="search-apps" placeholder="Buscar aplicaciones...">
+                <i class="fas fa-search"></i>
+            </div>
+            <button id="refresh-apps"><i class="fas fa-sync-alt"></i> Actualizar</button>
+        </div>
+
+        <div class="apps-container">
+            <table class="apps-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Versión</th>
+                        <th>Tamaño</th>
+                        <th>Fecha Instalación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="apps-list">
+                    {% for app in apps %}
+                    <tr>
+                        <td>{{ app.name }}</td>
+                        <td>{{ app.version }}</td>
+                        <td>{{ app.size }} MB</td>
+                        <td>{{ app.install_date }}</td>
+                        <td>
+                         
+                         <button class="uninstall-btn" onclick="showUninstallModal('{{ app.name }}')">
+                           <i class="fas fa-trash"></i> Desinstalar
+                           </button>
+                           <button class="btn-cache" onclick="clearCache('{{ app.name }}')">
+                              🧹 Borrar caché
+                             </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="uninstall-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h3>Confirmar Desinstalación</h3>
+            <p id="modal-message">¿Estás seguro de querer desinstalar esta aplicación?</p>
+            <div class="modal-actions">
+                <button id="confirm-uninstall" class="danger-btn">Desinstalar</button>
+                <button id="cancel-uninstall" class="cancel-btn">Cancelar</button>
+            </div>
+            </div>
+        </div>
+      
+    </div>
+    <input type="hidden" id="csrf-token" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+    <script src="/static/js/apps_manager.js"></script>
+</body>
+</html>

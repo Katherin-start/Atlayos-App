@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="{{ config.tema }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración Avanzada | Panel de Control</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #a084ee;
+            --primary-dark: #6f61c0;
+            --success: #06d6a0;
+            --warning: #ffd166;
+            --danger: #ef476f;
+            --light: #181824;
+            --dark: #f8f9fa;
+            --gray: #adb5bd;
+            --light-gray: #23233a;
+            --card-shadow: 0 4px 24px rgba(160, 132, 238, 0.08);
+            --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            min-height: 100vh;
+            margin: 0;
+            transition: var(--transition);
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-shadow: 0 0 10px #a084ee33;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px #a084ee22;
+            transition: var(--transition);
+        }
+        .back-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px) scale(1.03);
+        }
+
+        .settings-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+        }
+
+        .settings-nav {
+            background: var(--light-gray);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--card-shadow);
+            height: fit-content;
+        }
+
+        .settings-nav h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.9rem 1.2rem;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+        .nav-link.active,
+        .nav-link:hover {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 2px 8px #a084ee22;
+        }
+        .nav-link i {
+            width: 24px;
+            text-align: center;
+        }
+
+        .settings-content {
+            background: var(--light-gray);
+            border-radius: 14px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .settings-section {
+            margin-bottom: 2.5rem;
+        }
+        .settings-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #23233a55;
+            font-weight: 600;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 500;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .slider {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: #23233a;
+            outline: none;
+            box-shadow: 0 1px 4px #a084ee22;
+        }
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 2px 8px #a084ee44;
+            transition: var(--transition);
+        }
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+        .slider-value {
+            min-width: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #44446a;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #fff;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .toggle-slider {
+            background-color: var(--primary);
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(30px);
+        }
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 0.5rem;
+            color: var(--primary);
+            cursor: help;
+        }
+        .info-tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #23233a;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.85rem;
+            font-weight: normal;
+            box-shadow: 0 2px 8px #a084ee22;
+        }
+
+        .theme-preview {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .theme-option {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            background: #23233a;
+            color: #fff;
+            box-shadow: 0 2px 8px #a084ee22;
+        }
+        .theme-option:hover {
+            transform: translateY(-3px) scale(1.03);
+        }
+        .theme-option.active {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px #a084ee33;
+        }
+        .theme-light {
+            background: linear-gradient(135deg, #23233a 0%, #23233a 100%);
+            color: #fff;
+        }
+        .theme-dark {
+            background: linear-gradient(135deg, #181824 0%, #23233a 100%);
+            color: #fff;
+        }
+        .theme-name {
+            font-weight: 600;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .form-actions {
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 2px 8px #a084ee22;
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* Mejorar la sección de seguridad */
+        #section-seguridad .form-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem 3rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        #section-seguridad .form-group {
+            flex: 1 1 340px;
+            margin-bottom: 0;
+            background: transparent;
+        }
+
+        #section-seguridad .form-group label {
+            font-size: 1.08rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #section-seguridad .form-group input.input-dark {
+            margin-bottom: 0.5rem;
+        }
+
+        #section-seguridad .form-group small {
+            color: var(--gray);
+            margin-top: 8px;
+            display: block;
+            font-size: 0.97rem;
+        }
+
+        #section-seguridad .toggle-label {
+            gap: 1rem;
+        }
+
+        #section-seguridad .toggle-switch {
+            margin-left: 1rem;
+        }
+
+        #section-seguridad .btn-outline {
+            padding: 1rem;
+            font-size: 1.08rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+
+        #section-seguridad > div:last-child {
+            margin-top: 2.5rem;
+        }
+
+        #section-seguridad small[style*="text-align:center"] {
+            margin-top: 0.5rem;
+            font-size: 0.97rem;
+        }
+
+        .input-dark {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border-radius: 6px;
+            border: 1.5px solid #23233a;
+            background: #23233a;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border 0.2s;
+            box-shadow: 0 1px 4px #a084ee22;
+        }
+        .input-dark:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .settings-container {
+                grid-template-columns: 1fr;
+            }
+            .settings-nav {
+                margin-bottom: 2rem;
+            }
+            #section-seguridad .form-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .settings-content {
+                padding: 1rem;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            #section-seguridad .form-group {
+                flex: 1 1 100%;
+            }
+            #section-seguridad .btn-outline {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1><i class="fas fa-sliders-h"></i> Configuración del Sistema</h1>
+            <a href="/" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Volver al Panel
+            </a>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            <i class="fas fa-{% if category == 'success' %}check-circle{% else %}exclamation-circle{% endif %}"></i>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="settings-container">
+            <div class="settings-nav">
+                <h3><i class="fas fa-cog"></i> Configuración</h3>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-section="rendimiento">
+                            <i class="fas fa-tachometer-alt"></i> Rendimiento
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="notificaciones">
+                            <i class="fas fa-bell"></i> Notificaciones
+                        </a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="seguridad">
+                            <i class="fas fa-shield-alt"></i> Seguridad
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="settings-content">
+                <form method="POST">
+                    <!-- Sección Rendimiento -->
+                    <div class="settings-section" id="section-rendimiento">
+                        <h2><i class="fas fa-tachometer-alt"></i> Configuración de Rendimiento</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="intervalo">
+                                    <i class="fas fa-sync-alt"></i> Intervalo de Monitoreo
+                                    <span class="info-tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip-text">Frecuencia en segundos para actualizar los datos del sistema</span>
+                                    </span>
+                                </label>
+                                <div class="slider-container">
+                                    <input type="range" min="1" max="30" value="{{ config.intervalo }}" class="slider" id="intervalo-slider" name="intervalo">
+                                    <span class="slider-value" id="intervalo-value">{{ config.intervalo }}</span> seg
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpu_threshold">
+                                    <i class="fas fa-microchip"></i> Umbral de CPU
+                                    <span class="info-tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip-text">Porcentaje de uso que activará una alerta</span>
+                                    </span>
+                                </label>
+                                <div class="slider-container">
+                                    <input type="range" min="1" max="100" value="{{ config.cpu_threshold }}" class="slider" id="cpu-slider" name="cpu_threshold">
+                                    <span class="slider-value" id="cpu-value">{{ config.cpu_threshold }}</span>%
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ram_threshold">
+                                    <i class="fas fa-memory"></i> Umbral de RAM
+                                    <span class="info-tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip-text">Porcentaje de uso que activará una alerta</span>
+                                    </span>
+                                </label>
+                                <div class="slider-container">
+                                    <input type="range" min="1" max="100" value="{{ config.ram_threshold }}" class="slider" id="ram-slider" name="ram_threshold">
+                                    <span class="slider-value" id="ram-value">{{ config.ram_threshold }}</span>%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sección Notificaciones -->
+                    <div class="settings-section" id="section-notificaciones" style="display:none;">
+                        <h2><i class="fas fa-bell"></i> Configuración de Notificaciones</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="toggle-label">
+                                    <i class="fas fa-bell"></i> Notificaciones del Sistema
+                                    <span class="info-tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip-text">Activa o desactiva todas las notificaciones del sistema</span>
+                                    </span>
+                                    <div class="toggle-switch">
+                                        <input type="checkbox" id="notificaciones" name="notificaciones" {% if config.notificaciones == 'on' %}checked{% endif %}>
+                                        <span class="toggle-slider"></span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sección Seguridad -->
+                  
+<div class="settings-section" id="section-seguridad" style="display:none;">
+    <h2><i class="fas fa-shield-alt"></i> Configuración de Seguridad</h2>
+    <div class="form-grid">
+        <!-- Cambiar contraseña -->
+        <div class="form-group">
+            <label for="password">
+                <i class="fas fa-key"></i> Cambiar Contraseña
+            </label>
+            <input type="password" id="password" name="password" placeholder="Nueva contraseña" class="input-dark">
+            <small style="color:var(--gray);margin-top:4px;display:block;">Usa una contraseña segura y única.</small>
+        </div>
+        <!-- Activar autenticación en dos pasos -->
+        <div class="form-group">
+            <label class="toggle-label" style="margin-bottom:0;">
+                <i class="fas fa-user-lock"></i> Autenticación en dos pasos
+                <span class="info-tooltip">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="tooltip-text">Requiere un código adicional al iniciar sesión para mayor seguridad.</span>
+                </span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="twofa" name="twofa" {% if config.twofa == 'on' %}checked{% endif %}>
+                    <span class="toggle-slider"></span>
+                </div>
+            </label>
+            <small style="color:var(--gray);margin-top:4px;display:block;">Protege tu cuenta con un segundo factor de autenticación.</small>
+        </div>
+    </div>
+    <div style="margin-top:2.5rem;">
+        <button type="button" class="btn btn-outline" style="width:100%;font-size:1.08rem;padding:1rem;" onclick="alert('Se cerrarán todas las sesiones activas.')">
+            <i class="fas fa-sign-out-alt"></i> Cerrar sesión en todos los dispositivos
+        </button>
+        <small style="color:var(--gray);margin-top:6px;display:block;text-align:center;">
+            Úsalo si sospechas que tu cuenta ha sido comprometida.
+        </small>
+    </div>
+</div>
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-outline">
+                            <i class="fas fa-undo"></i> Restablecer
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Slider value updates
+        document.getElementById('intervalo-slider').addEventListener('input', function() {
+            document.getElementById('intervalo-value').textContent = this.value;
+        });
+        document.getElementById('cpu-slider').addEventListener('input', function() {
+            document.getElementById('cpu-value').textContent = this.value;
+        });
+        document.getElementById('ram-slider').addEventListener('input', function() {
+            document.getElementById('ram-value').textContent = this.value;
+        });
+        // Theme selection
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.theme-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('tema').value = this.dataset.theme;
+            });
+        });
+        // Toggle switch
+        document.getElementById('notificaciones').addEventListener('change', function() {
+            this.value = this.checked ? 'on' : 'off';
+        });
+
+        // Navegación entre secciones
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Quitar activo de todos
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                // Ocultar todas las secciones
+                document.querySelectorAll('.settings-section').forEach(sec => sec.style.display = 'none');
+                // Mostrar la seleccionada
+                const sectionId = 'section-' + this.dataset.section;
+                const section = document.getElementById(sectionId);
+                if (section) section.style.display = '';
+            });
+        });
+    </script>
+</body>
+</html>

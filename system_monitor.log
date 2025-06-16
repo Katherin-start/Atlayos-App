@@ -1,0 +1,666 @@
+2025-06-12 02:12:20,333 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:12:20,334 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:12:20,335 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:12:21,395 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:12:21,401 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:12:24,404 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:24] "GET / HTTP/1.1" 200 -
+2025-06-12 02:12:24,791 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:24] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:12:24,792 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:24] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:12:24,940 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:12:25,245 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:12:35,284 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:35] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:12:35,312 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:12:35,649 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:35] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:12:35,649 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:35] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:12:35,975 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:35] "GET /socket.io/?EIO=4&transport=polling&t=PTY-y5A HTTP/1.1" 200 -
+2025-06-12 02:12:36,050 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:36] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:12:36,254 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:36] "POST /socket.io/?EIO=4&transport=polling&t=PTY-yAC&sid=7RN8RS1KkNl1K4z9AAAA HTTP/1.1" 200 -
+2025-06-12 02:12:36,345 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:36] "GET /socket.io/?EIO=4&transport=polling&t=PTY-yAG&sid=7RN8RS1KkNl1K4z9AAAA HTTP/1.1" 200 -
+2025-06-12 02:12:36,354 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:36] "POST /socket.io/?EIO=4&transport=polling&t=PTY-yF-&sid=7RN8RS1KkNl1K4z9AAAA HTTP/1.1" 200 -
+2025-06-12 02:12:36,683 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:36] "GET /socket.io/?EIO=4&transport=polling&t=PTY-yF_&sid=7RN8RS1KkNl1K4z9AAAA HTTP/1.1" 200 -
+2025-06-12 02:12:45,134 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:45] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:12:53,608 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:53] "GET / HTTP/1.1" 200 -
+2025-06-12 02:12:53,959 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:53] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:12:54,350 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:54] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:12:54,568 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:54] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:12:55,301 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:12:58,921 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:12:58] "GET /socket.io/?EIO=4&transport=websocket&sid=7RN8RS1KkNl1K4z9AAAA HTTP/1.1" 200 -
+2025-06-12 02:15:59,049 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:15:59,049 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:15:59,050 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:16:01,764 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:16:01,776 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:16:02,182 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:02] "GET / HTTP/1.1" 200 -
+2025-06-12 02:16:02,569 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:02] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:16:02,570 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:02] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:16:02,816 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:16:03,058 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:16:14,438 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:14] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:16:16,993 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:16] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:16:17,379 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:16:17,380 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:16:17,380 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:16:17,610 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "GET /socket.io/?EIO=4&transport=polling&t=PTY_oEm HTTP/1.1" 200 -
+2025-06-12 02:16:17,791 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:16:17,917 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "POST /socket.io/?EIO=4&transport=polling&t=PTY_oHG&sid=ojBD6QovZ3NeabqSAAAA HTTP/1.1" 200 -
+2025-06-12 02:16:17,977 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "GET /socket.io/?EIO=4&transport=polling&t=PTY_oHJ&sid=ojBD6QovZ3NeabqSAAAA HTTP/1.1" 200 -
+2025-06-12 02:16:17,989 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:17] "POST /socket.io/?EIO=4&transport=polling&t=PTY_oN0&sid=ojBD6QovZ3NeabqSAAAA HTTP/1.1" 200 -
+2025-06-12 02:16:18,320 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:18] "GET /socket.io/?EIO=4&transport=polling&t=PTY_oN1&sid=ojBD6QovZ3NeabqSAAAA HTTP/1.1" 200 -
+2025-06-12 02:16:26,310 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:26] "GET /socket.io/?EIO=4&transport=websocket&sid=ojBD6QovZ3NeabqSAAAA HTTP/1.1" 200 -
+2025-06-12 02:16:26,507 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:26] "GET / HTTP/1.1" 200 -
+2025-06-12 02:16:26,762 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:16:26,856 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:26] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:16:26,857 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:16:26] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:17:47,885 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:17:47,885 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:17:47,886 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:17:49,234 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:17:49,249 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:17:50,217 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:17:50] "GET / HTTP/1.1" 200 -
+2025-06-12 02:17:50,621 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:17:50] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:17:50,622 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:17:50] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:17:50,876 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:17:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:17:51,113 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:17:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:18:00,915 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:00] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:18:00,938 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:18:01,281 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:18:01,282 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:18:01,619 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "GET /socket.io/?EIO=4&transport=polling&t=PTZ0BbA HTTP/1.1" 200 -
+2025-06-12 02:18:01,709 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:18:01,880 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "POST /socket.io/?EIO=4&transport=polling&t=PTZ0BgN&sid=I2akqwqgyv_D_KlkAAAA HTTP/1.1" 200 -
+2025-06-12 02:18:01,988 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "GET /socket.io/?EIO=4&transport=polling&t=PTZ0BgP&sid=I2akqwqgyv_D_KlkAAAA HTTP/1.1" 200 -
+2025-06-12 02:18:01,999 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:01] "POST /socket.io/?EIO=4&transport=polling&t=PTZ0Bm9&sid=I2akqwqgyv_D_KlkAAAA HTTP/1.1" 200 -
+2025-06-12 02:18:02,301 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:02] "GET /socket.io/?EIO=4&transport=polling&t=PTZ0Bm9.0&sid=I2akqwqgyv_D_KlkAAAA HTTP/1.1" 200 -
+2025-06-12 02:18:09,529 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:09] "GET /socket.io/?EIO=4&transport=websocket&sid=I2akqwqgyv_D_KlkAAAA HTTP/1.1" 200 -
+2025-06-12 02:18:09,887 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:09] "GET / HTTP/1.1" 200 -
+2025-06-12 02:18:10,280 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:18:10,336 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:10] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:18:10,510 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:18:10] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:20:11,891 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:20:11,892 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:20:11,892 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:20:14,246 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:20:14,254 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:20:16,923 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:16] "GET / HTTP/1.1" 200 -
+2025-06-12 02:20:17,296 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:17] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:20:17,342 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:17] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:20:17,343 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:17] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:20:41,774 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:20:41,775 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:20:41,775 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:20:42,450 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:20:42,453 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:20:43,669 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:43] "GET / HTTP/1.1" 200 -
+2025-06-12 02:20:44,058 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:44] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:20:44,059 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:44] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:20:44,115 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:20:44,418 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:20:56,940 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:56] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:20:56,954 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:20:57,292 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:20:57,293 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:20:57,630 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "GET /socket.io/?EIO=4&transport=polling&t=PTZ0sZI HTTP/1.1" 200 -
+2025-06-12 02:20:57,689 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:20:57,890 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "POST /socket.io/?EIO=4&transport=polling&t=PTZ0sea&sid=G0BFjPH9tzJ-LHTZAAAA HTTP/1.1" 200 -
+2025-06-12 02:20:57,981 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:20:57] "GET /socket.io/?EIO=4&transport=polling&t=PTZ0seb&sid=G0BFjPH9tzJ-LHTZAAAA HTTP/1.1" 200 -
+2025-06-12 02:21:07,052 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:21:16,149 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:16] "GET /socket.io/?EIO=4&transport=websocket&sid=G0BFjPH9tzJ-LHTZAAAA HTTP/1.1" 200 -
+2025-06-12 02:21:16,481 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:16] "GET / HTTP/1.1" 200 -
+2025-06-12 02:21:16,667 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:21:16,912 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:16] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:21:16,914 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:21:16] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:22:12,613 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:22:12,614 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:22:12,615 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:22:14,824 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:22:14,834 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:22:16,617 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:22:16] "GET / HTTP/1.1" 200 -
+2025-06-12 02:22:16,957 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:22:16] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:22:17,281 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:22:17] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:22:17,282 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:22:17] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:22:17,820 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:22:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:23:20,110 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:23:20,110 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:23:20,110 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:23:21,321 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:23:21,329 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:23:22,852 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:22] "GET / HTTP/1.1" 200 -
+2025-06-12 02:23:23,256 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:23] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:23:23,258 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:23] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:23:23,406 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:23] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:23:23,685 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:23:32,755 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:32] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:23:34,918 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:34] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:23:35,292 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:23:35,292 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:23:35,292 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:23:35,518 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1T8E HTTP/1.1" 200 -
+2025-06-12 02:23:35,643 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:23:35,769 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "POST /socket.io/?EIO=4&transport=polling&t=PTZ1TBY&sid=qbNm4nvg0qhO_nLfAAAA HTTP/1.1" 200 -
+2025-06-12 02:23:35,878 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1TBa&sid=qbNm4nvg0qhO_nLfAAAA HTTP/1.1" 200 -
+2025-06-12 02:23:35,889 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:35] "POST /socket.io/?EIO=4&transport=polling&t=PTZ1THC&sid=qbNm4nvg0qhO_nLfAAAA HTTP/1.1" 200 -
+2025-06-12 02:23:36,219 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:36] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1THD&sid=qbNm4nvg0qhO_nLfAAAA HTTP/1.1" 200 -
+2025-06-12 02:23:43,277 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:43] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:23:52,399 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:23:52] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:24:02,979 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:24:12,074 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:12] "GET /socket.io/?EIO=4&transport=websocket&sid=qbNm4nvg0qhO_nLfAAAA HTTP/1.1" 200 -
+2025-06-12 02:24:47,046 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:24:47,047 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:24:47,047 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:24:47,708 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:24:47,711 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:24:49,037 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:49] "GET / HTTP/1.1" 200 -
+2025-06-12 02:24:49,423 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:49] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:24:49,424 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:49] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:24:49,471 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:24:49,754 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:24:58,855 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:58] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:24:58,877 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:24:59,198 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:24:59,199 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:24:59,539 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1nd7 HTTP/1.1" 200 -
+2025-06-12 02:24:59,601 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:24:59,803 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "POST /socket.io/?EIO=4&transport=polling&t=PTZ1niN&sid=uvIw-eZWa6nQGGC9AAAA HTTP/1.1" 200 -
+2025-06-12 02:24:59,896 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1niP&sid=uvIw-eZWa6nQGGC9AAAA HTTP/1.1" 200 -
+2025-06-12 02:24:59,908 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:24:59] "POST /socket.io/?EIO=4&transport=polling&t=PTZ1nn_&sid=uvIw-eZWa6nQGGC9AAAA HTTP/1.1" 200 -
+2025-06-12 02:25:00,236 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:25:00] "GET /socket.io/?EIO=4&transport=polling&t=PTZ1no0&sid=uvIw-eZWa6nQGGC9AAAA HTTP/1.1" 200 -
+2025-06-12 02:27:37,096 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:37,357 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:37,418 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:37,683 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:37,745 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,011 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,072 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,366 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,383 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,707 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,710 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:27:38,838 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:38] "GET /socket.io/?EIO=4&transport=websocket&sid=uvIw-eZWa6nQGGC9AAAA HTTP/1.1" 200 -
+2025-06-12 02:27:49,620 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-12 02:27:49,621 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-12 02:27:49,621 - werkzeug - INFO -  * Restarting with stat
+2025-06-12 02:27:50,653 - werkzeug - WARNING -  * Debugger is active!
+2025-06-12 02:27:50,664 - werkzeug - INFO -  * Debugger PIN: 255-441-607
+2025-06-12 02:27:51,578 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:51] "GET / HTTP/1.1" 200 -
+2025-06-12 02:27:51,968 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:51] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:27:51,969 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:51] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:27:52,068 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:52] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-12 02:27:52,400 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-12 02:27:58,505 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:58] "GET /apps_page HTTP/1.1" 200 -
+2025-06-12 02:27:58,737 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:27:58,887 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:27:58] "GET /static/js/apps_manager.js HTTP/1.1" 200 -
+2025-06-12 02:28:04,583 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:04] "GET /apps HTTP/1.1" 200 -
+2025-06-12 02:28:25,917 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:25] "POST /uninstall_app/Android%20Studio HTTP/1.1" 200 -
+2025-06-12 02:28:29,804 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:29] "GET /apps HTTP/1.1" 200 -
+2025-06-12 02:28:36,092 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:36] "GET / HTTP/1.1" 200 -
+2025-06-12 02:28:36,340 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:28:36,469 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:36] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-12 02:28:36,470 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:36] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:28:45,577 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:45] "GET /index.html HTTP/1.1" 200 -
+2025-06-12 02:28:45,947 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:28:45,947 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:45] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-12 02:28:45,948 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:45] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-12 02:28:46,186 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "GET /socket.io/?EIO=4&transport=polling&t=PTZ2e-e HTTP/1.1" 200 -
+2025-06-12 02:28:46,319 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-12 02:28:46,412 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "POST /socket.io/?EIO=4&transport=polling&t=PTZ2f1t&sid=xznd0c8JCY9CT3OnAAAA HTTP/1.1" 200 -
+2025-06-12 02:28:46,551 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "GET /socket.io/?EIO=4&transport=polling&t=PTZ2f1v&sid=xznd0c8JCY9CT3OnAAAA HTTP/1.1" 200 -
+2025-06-12 02:28:46,558 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "POST /socket.io/?EIO=4&transport=polling&t=PTZ2f7R&sid=xznd0c8JCY9CT3OnAAAA HTTP/1.1" 200 -
+2025-06-12 02:28:46,890 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:46] "GET /socket.io/?EIO=4&transport=polling&t=PTZ2f7R.0&sid=xznd0c8JCY9CT3OnAAAA HTTP/1.1" 200 -
+2025-06-12 02:28:53,527 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-12 02:28:57,593 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:57] "GET /socket.io/?EIO=4&transport=websocket&sid=xznd0c8JCY9CT3OnAAAA HTTP/1.1" 200 -
+2025-06-12 02:28:57,598 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:57] "GET / HTTP/1.1" 200 -
+2025-06-12 02:28:57,964 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:57] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-12 02:28:57,965 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-12 02:28:57,965 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2025 02:28:57] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-13 23:11:58,124 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-13 23:11:58,125 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 23:11:58,125 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 23:11:58,579 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 23:11:58,584 - werkzeug - INFO -  * Debugger PIN: 278-585-186
+2025-06-13 23:12:01,630 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:01] "GET / HTTP/1.1" 200 -
+2025-06-13 23:12:02,165 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:02] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-13 23:12:02,167 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:02] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-13 23:12:02,267 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-13 23:12:02,952 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-13 23:12:19,234 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:19] "GET /apps_page HTTP/1.1" 200 -
+2025-06-13 23:12:19,490 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 23:12:19,604 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:19] "GET /static/js/apps_manager.js HTTP/1.1" 200 -
+2025-06-13 23:12:24,021 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:24] "GET /apps HTTP/1.1" 200 -
+2025-06-13 23:12:43,096 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:43] "GET / HTTP/1.1" 200 -
+2025-06-13 23:12:43,361 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 23:12:43,466 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:43] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-13 23:12:43,471 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:12:43] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-13 23:14:25,110 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-13 23:14:25,110 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 23:14:25,111 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 23:14:25,520 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 23:14:25,523 - werkzeug - INFO -  * Debugger PIN: 278-585-186
+2025-06-13 23:14:29,338 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:29] "GET / HTTP/1.1" 200 -
+2025-06-13 23:14:29,702 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:29] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-13 23:14:29,703 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:29] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-13 23:14:29,767 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-13 23:14:30,933 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-13 23:14:37,811 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:37] "GET /apps_page HTTP/1.1" 200 -
+2025-06-13 23:14:38,168 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 23:14:38,169 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:38] "GET /static/js/apps_manager.js HTTP/1.1" 200 -
+2025-06-13 23:14:40,460 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:14:40] "GET /apps HTTP/1.1" 200 -
+2025-06-13 23:15:02,423 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:15:02] "POST /uninstall_app/Android%20Studio HTTP/1.1" 200 -
+2025-06-13 23:15:05,156 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:15:05] "GET /apps HTTP/1.1" 200 -
+2025-06-13 23:15:13,769 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:15:13] "POST /uninstall_app/Android%20Studio HTTP/1.1" 200 -
+2025-06-13 23:15:17,282 - werkzeug - INFO - 127.0.0.1 - - [13/Jun/2025 23:15:17] "GET /apps HTTP/1.1" 200 -
+2025-06-14 00:17:05,709 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.4:5000
+2025-06-14 00:17:05,709 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 00:17:05,710 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 00:17:06,085 - werkzeug - WARNING -  * Debugger is active!
+2025-06-14 00:17:06,090 - werkzeug - INFO -  * Debugger PIN: 278-585-186
+2025-06-14 15:28:42,108 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-14 15:28:42,108 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 15:28:42,108 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 15:28:42,721 - werkzeug - WARNING -  * Debugger is active!
+2025-06-14 15:28:42,725 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-14 15:28:45,588 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:45] "GET / HTTP/1.1" 200 -
+2025-06-14 15:28:45,968 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:45] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 15:28:45,969 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:45] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 15:28:46,046 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-14 15:28:46,265 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-14 15:28:52,907 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:52] "GET /apps_page HTTP/1.1" 200 -
+2025-06-14 15:28:53,043 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 15:28:53,260 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:53] "GET /static/js/apps_manager.js HTTP/1.1" 200 -
+2025-06-14 15:28:56,525 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:28:56] "GET /apps HTTP/1.1" 200 -
+2025-06-14 15:29:11,507 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:11] "POST /uninstall_app/Safer%20Web HTTP/1.1" 200 -
+2025-06-14 15:29:13,598 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:13] "GET /apps HTTP/1.1" 200 -
+2025-06-14 15:29:27,830 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:27] "POST /uninstall_app/Avast%20Update%20Helper HTTP/1.1" 200 -
+2025-06-14 15:29:29,609 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:29] "GET /apps HTTP/1.1" 200 -
+2025-06-14 15:29:33,980 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:33] "GET / HTTP/1.1" 200 -
+2025-06-14 15:29:34,243 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 15:29:34,380 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:34] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 15:29:34,381 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:34] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 15:29:40,015 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:40] "[35m[1mGET /configuracion HTTP/1.1[0m" 500 -
+2025-06-14 15:29:40,411 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:40] "GET /configuracion?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-14 15:29:40,419 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:40] "GET /configuracion?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-14 15:29:40,631 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:40] "GET /configuracion?__debugger__=yes&cmd=resource&f=console.png&s=rKYf5lxNoqiipwD1nvE0 HTTP/1.1" 200 -
+2025-06-14 15:29:40,783 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:29:40] "GET /configuracion?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-14 15:32:37,667 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-14 15:32:37,667 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 15:32:37,667 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 15:32:38,288 - werkzeug - WARNING -  * Debugger is active!
+2025-06-14 15:32:38,290 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-14 15:32:39,149 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:39] "GET / HTTP/1.1" 200 -
+2025-06-14 15:32:39,563 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:39] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 15:32:39,565 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:39] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 15:32:39,611 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-14 15:32:40,120 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-14 15:32:45,326 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:45] "GET /configuracion HTTP/1.1" 200 -
+2025-06-14 15:32:50,073 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:50] "[35m[1mPOST /configuracion HTTP/1.1[0m" 500 -
+2025-06-14 15:32:50,430 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:50] "GET /configuracion?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-14 15:32:50,431 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:50] "GET /configuracion?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-14 15:32:50,677 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:50] "GET /configuracion?__debugger__=yes&cmd=resource&f=console.png&s=y1VSWALIbykfTpLLKPDV HTTP/1.1" 200 -
+2025-06-14 15:32:50,831 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:32:50] "GET /configuracion?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-14 15:34:05,531 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-14 15:34:05,531 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 15:34:05,531 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 15:34:06,184 - werkzeug - WARNING -  * Debugger is active!
+2025-06-14 15:34:06,187 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-14 15:34:08,498 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:08] "GET / HTTP/1.1" 200 -
+2025-06-14 15:34:08,979 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 15:34:08,984 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-14 15:34:09,010 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:09] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 15:34:09,602 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-14 15:34:17,672 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:34:17] "GET /configuracion HTTP/1.1" 200 -
+2025-06-14 15:58:20,290 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:20] "GET / HTTP/1.1" 200 -
+2025-06-14 15:58:20,542 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 15:58:20,688 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:20] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 15:58:20,689 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:20] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 15:58:28,861 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:28] "GET /index.html HTTP/1.1" 200 -
+2025-06-14 15:58:30,491 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:30] "GET /index.html HTTP/1.1" 200 -
+2025-06-14 15:58:30,882 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 15:58:30,896 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:30] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-14 15:58:30,979 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:30] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-14 15:58:31,061 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "GET /index.html HTTP/1.1" 200 -
+2025-06-14 15:58:31,136 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "GET /socket.io/?EIO=4&transport=polling&t=PTmFA5E HTTP/1.1" 200 -
+2025-06-14 15:58:31,552 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "POST /socket.io/?EIO=4&transport=polling&t=PTmFA6A&sid=MUwcKZSuS1KB5nnSAAAA HTTP/1.1" 200 -
+2025-06-14 15:58:31,566 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "GET /socket.io/?EIO=4&transport=polling&t=PTmFA6M&sid=MUwcKZSuS1KB5nnSAAAA HTTP/1.1" 200 -
+2025-06-14 15:58:31,652 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-14 15:58:31,776 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "POST /socket.io/?EIO=4&transport=polling&t=PTmFACW&sid=MUwcKZSuS1KB5nnSAAAA HTTP/1.1" 200 -
+2025-06-14 15:58:31,931 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:31] "GET /socket.io/?EIO=4&transport=polling&t=PTmFACX&sid=MUwcKZSuS1KB5nnSAAAA HTTP/1.1" 200 -
+2025-06-14 15:58:44,090 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:44] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 15:58:53,713 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 15:58:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:52,653 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:52] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:52,899 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:52] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:52,976 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:52] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,227 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,303 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,552 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,632 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,880 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:53,959 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:53] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,209 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,288 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,536 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,628 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,629 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:54,932 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:54] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:55,041 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:55] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:55,530 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:55] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:55,584 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:55] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,056 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,107 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,166 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,435 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,510 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,571 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,815 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,849 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,863 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:56,943 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:56] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,266 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,316 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,380 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,394 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,659 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,722 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,769 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,808 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,834 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:57,932 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:57] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,118 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,269 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,271 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,317 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,583 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,673 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,781 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,846 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:58,953 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:58] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,143 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,145 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,181 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,289 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,406 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,476 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,571 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,884 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:45:59,960 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:45:59] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,071 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,075 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,336 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,400 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,401 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,740 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:00,741 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:00] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,084 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,085 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,332 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,440 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,471 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:01,798 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:01] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,048 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,125 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,376 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,455 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,705 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:02,783 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:02] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,032 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,109 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,358 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,434 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,684 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:03,763 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:03] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,013 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,090 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,335 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,413 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,664 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,742 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:04,989 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:04] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,067 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,317 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,381 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,643 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,693 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:05,972 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:05] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:06,018 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:06] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:06,350 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:06] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:06,378 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:06] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:06,765 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:06] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:06,786 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:06] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,203 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,248 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,331 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,635 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,637 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,718 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:07,746 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:07] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,008 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,157 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,159 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,395 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,614 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,761 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:08,829 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:08] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,036 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,131 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,244 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,462 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,518 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,668 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,927 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:09,941 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:09] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,056 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,358 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,402 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,499 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,793 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,807 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:10,902 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:10] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,121 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,169 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,232 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,433 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,495 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,556 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,745 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,822 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:11,884 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:11] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,071 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,149 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,197 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,399 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,478 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,511 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,711 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,789 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:12,823 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:12] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,040 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,117 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,148 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,365 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,477 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,478 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,690 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,831 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:13,832 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:13] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,016 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,156 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,161 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,340 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,498 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,499 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,666 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,840 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,842 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:14,996 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:14] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,182 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,183 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,321 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,541 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,542 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,646 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,868 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,869 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:15,974 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:15] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,195 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,199 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,289 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,538 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,539 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,614 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,848 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,866 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:16,939 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:16] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,238 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,314 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,329 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,705 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,756 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:17,783 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:17] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,095 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,293 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,331 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,563 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,663 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,695 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:18,939 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:18] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,083 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,096 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,421 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,454 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,501 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,841 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:19,951 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:19] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,002 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,300 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,420 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,437 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,813 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,924 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:20,976 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:20] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:21,279 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:21] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:21,306 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:21] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:21,710 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:21] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:21,742 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:21] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,112 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,177 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,585 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,613 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,940 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:22,940 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:23,312 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:23] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:23,313 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:23] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:23,654 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:23] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:23,656 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:23] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,012 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,013 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,259 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,368 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,369 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,586 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,700 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,700 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:24,899 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:24] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,024 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,027 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,226 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,354 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,355 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,539 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,711 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,712 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:25,866 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:25] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,067 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,068 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,189 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,409 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,411 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,516 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,768 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,769 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:26,845 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:26] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,112 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,113 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,157 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,456 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,456 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,470 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,798 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:27,805 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:27] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:28,138 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:28] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:28,390 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:28] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:28,458 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:28] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 16:46:28,734 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 16:46:28] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-14 17:52:30,534 - werkzeug - INFO -  * Detected change in 'D:\\SO\\backend\\app.py', reloading
+2025-06-14 17:52:30,604 - werkzeug - INFO -  * Detected change in 'D:\\SO\\backend\\app.py', reloading
+2025-06-14 17:52:30,873 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 17:57:35,399 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-14 17:57:35,399 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-14 17:57:35,399 - werkzeug - INFO -  * Restarting with stat
+2025-06-14 17:57:36,046 - werkzeug - WARNING -  * Debugger is active!
+2025-06-14 17:57:36,057 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-14 17:57:37,061 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:37] "GET / HTTP/1.1" 200 -
+2025-06-14 17:57:37,558 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:37] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 17:57:37,562 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:37] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 17:57:37,629 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-14 17:57:38,119 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-14 17:57:43,496 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:43] "GET /configuracion HTTP/1.1" 200 -
+2025-06-14 17:57:47,756 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:47] "[32mPOST /configuracion HTTP/1.1[0m" 302 -
+2025-06-14 17:57:48,114 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:57:48] "GET /configuracion HTTP/1.1" 200 -
+2025-06-14 17:58:13,483 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:13] "GET / HTTP/1.1" 200 -
+2025-06-14 17:58:13,849 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:13] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 17:58:13,850 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:13] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 17:58:13,851 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 17:58:21,185 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "GET /index.html HTTP/1.1" 200 -
+2025-06-14 17:58:21,551 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 17:58:21,556 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-14 17:58:21,558 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-14 17:58:21,783 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PTmgba8 HTTP/1.1" 200 -
+2025-06-14 17:58:21,911 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:21] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-14 17:58:22,025 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:22] "POST /socket.io/?EIO=4&transport=polling&t=PTmgbdT&sid=IVYJQYsYgUgj4O0cAAAA HTTP/1.1" 200 -
+2025-06-14 17:58:22,146 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:22] "GET /socket.io/?EIO=4&transport=polling&t=PTmgbdX&sid=IVYJQYsYgUgj4O0cAAAA HTTP/1.1" 200 -
+2025-06-14 17:58:22,160 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:22] "POST /socket.io/?EIO=4&transport=polling&t=PTmgbj6&sid=IVYJQYsYgUgj4O0cAAAA HTTP/1.1" 200 -
+2025-06-14 17:58:22,476 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:22] "GET /socket.io/?EIO=4&transport=polling&t=PTmgbj6.0&sid=IVYJQYsYgUgj4O0cAAAA HTTP/1.1" 200 -
+2025-06-14 17:58:25,560 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:25] "GET /socket.io/?EIO=4&transport=websocket&sid=IVYJQYsYgUgj4O0cAAAA HTTP/1.1" 200 -
+2025-06-14 17:58:25,893 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:25] "GET / HTTP/1.1" 200 -
+2025-06-14 17:58:26,174 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-14 17:58:26,377 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:26] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-14 17:58:26,429 - werkzeug - INFO - 127.0.0.1 - - [14/Jun/2025 17:58:26] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-14 17:59:01,877 - werkzeug - INFO -  * Detected change in 'D:\\SO\\backend\\app.py', reloading

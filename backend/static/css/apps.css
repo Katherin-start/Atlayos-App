@@ -1,0 +1,281 @@
+:root {
+    --primary: #8E54E9;
+    --primary-dark: #6A3093;
+    --secondary: #03DAC6;
+    --danger: #ff4e50;
+    --danger-dark: #f44336;
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --bg-card-hover: #252525;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #333333;
+    --success: #4CAF50;
+    --warning: #FFC107;
+}
+
+/* Estructura principal */
+.container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-dark);
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Filtros de búsqueda - Versión Pro */
+.filters {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.filters::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.filters input {
+    flex-grow: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(5px);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.filters input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary), 0 8px 24px rgba(142, 84, 233, 0.3);
+    border-color: transparent;
+    background: rgba(40, 40, 40, 0.8);
+}
+
+.filters input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* Lista de tarjetas - Versión Premium */
+.apps-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Tarjeta de aplicación - Diseño Profesional */
+.app-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    transition: height 0.4s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    border-color: rgba(142, 84, 233, 0.3);
+    background: var(--bg-card-hover);
+}
+
+.app-card:hover::before {
+    height: 100%;
+}
+
+/* Encabezado - Estilo Premium */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.app-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.app-size {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(142, 84, 233, 0.2);
+}
+
+/* Detalles - Versión Mejorada */
+.app-details {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+.app-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+.app-details strong {
+    color: var(--secondary);
+    margin-right: 0.5rem;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.app-details i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+/* Botón de desinstalar - Efecto Pro */
+.uninstall-btn {
+    background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+}
+
+.uninstall-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.uninstall-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(244, 67, 54, 0.3);
+}
+
+.uninstall-btn:hover::before {
+    left: 100%;
+}
+
+/* Efectos para apps pesadas */
+.app-card.large-app {
+    border-left: 4px solid var(--warning);
+}
+
+.app-card.large-app .app-header h3 {
+    background: linear-gradient(135deg, var(--warning), #FF9800);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Barra de búsqueda mejorada */
+#search-apps {
+    max-width: 500px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%238E54E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+    padding-left: 3rem;
+    background-size: 1.2rem;
+}
+
+/* Alertas profesionales */
+.apps-alert {
+    background: rgba(255, 204, 0, 0.1);
+    border-left: 4px solid var(--warning);
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.5s ease;
+}
+
+.alert-danger {
+    background: rgba(244, 67, 54, 0.1);
+    border-color: var(--danger);
+    color: var(--text-primary);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    backdrop-filter: blur(5px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto de neón para elementos importantes */
+.neon-effect {
+    text-shadow: 0 0 5px rgba(142, 84, 233, 0.5), 0 0 10px rgba(142, 84, 233, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .apps-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    #search-apps {
+        max-width: 100%;
+        width: 100%;
+    }
+}

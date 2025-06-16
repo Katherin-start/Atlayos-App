@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Recursos del Sistema</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1><i class="fas fa-tachometer-alt"></i> Monitor de Recursos</h1>
+            <div class="timestamp" id="timestamp"></div>
+           <a href="{{ url_for('menu') }}" class="btn-menu" style="float: right; margin-top: 10px;">
+               <i class="fas fa-arrow-left"></i> Volver al Menú
+           </a>
+        </div>
+
+        <div id="alerts-container" class="alerts-container"></div>
+
+        <!-- Nueva tarjeta de información del sistema - AÑADIDO -->
+       <div class="system-info-card">
+    <h3>Información del Sistema</h3>
+    <div class="info-grid">
+        <div>
+            <label>Nombre del PC:</label>
+            <span id="connected-host">Cargando...</span>
+        </div>
+        <div>
+            <label>Modelo:</label>
+            <span id="system-model">Cargando...</span>
+        </div>
+        <div>
+            <label>Arquitectura:</label>
+            <span id="system-arch">Cargando...</span>
+        </div>
+        <div>
+            <label>Sistema Operativo:</label>
+            <span id="system-os">Cargando...</span>
+        </div>
+        <div>
+            <label>Versión:</label>
+            <span id="system-version">Cargando...</span>
+        </div>
+    </div>
+</div>
+
+        <div class="grid">
+            <!-- Tarjeta CPU -->
+            <div class="card cpu-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-microchip"></i> CPU</h2>
+                    <span class="status-indicator" id="cpu-status"></span>
+                </div>
+                <div class="card-value" id="cpu-percent">0%</div>
+                <div class="card-subtext">Núcleos: <span id="cpu-cores">0</span> | Frecuencia: <span id="cpu-freq">0.00</span> GHz</div>
+                <div class="card-subtext">Temperatura: <span id="cpu-temp">0.0</span> °C</div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Uso de CPU</span>
+                        <span id="cpu-percent-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill cpu-progress" id="cpu-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="cpuChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Tarjeta Memoria -->
+            <div class="card memory-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-memory"></i> Memoria RAM</h2>
+                    <span class="status-indicator" id="mem-status"></span>
+                </div>
+                <div class="card-value" id="mem-percent">0%</div>
+                <div class="card-subtext">Usado: <span id="mem-used">0.00</span> GB</div>
+                <div class="card-subtext">Total: <span id="mem-total">0.00</span> GB</div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Uso de Memoria</span>
+                        <span id="mem-percent-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill memory-progress" id="mem-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Disco -->
+            <div class="card disk-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-hdd"></i> Disco Duro</h2>
+                    <span class="status-indicator" id="disk-status"></span>
+                </div>
+                <div class="card-value" id="disk-percent">0%</div>
+                <div class="card-subtext">Usado: <span id="disk-used">0.00</span> GB</div>
+                <div class="card-subtext">Total: <span id="disk-total">0.00</span> GB</div>
+                
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Uso de Disco</span>
+                        <span id="disk-percent-text">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill disk-progress" id="disk-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Red -->
+            <div class="card network-card">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-network-wired"></i> Red</h2>
+                    <span class="status-indicator" id="network-status"></span>
+                </div>
+                <div class="card-value" id="network-total">0 MB</div>
+                <div class="card-subtext">Enviados: <span id="bytes-sent">0.00</span> MB</div>
+                <div class="card-subtext">Recibidos: <span id="bytes-recv">0.00</span> MB</div>
+                
+                <div class="chart-container network-chart">
+                    <canvas id="networkChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Tarjeta Procesos CPU -->
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-tasks"></i> Procesos (CPU)</h2>
+                   <a href="/apps-view" class="apps-link"><i class="fas fa-boxes"></i> Ver Aplicaciones</a>
+                </div>
+                <table class="process-table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Nombre</th>
+                            <th>CPU %</th>
+                            <th>Memoria %</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cpu-processes">
+                        <!-- Los procesos se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tarjeta Procesos Memoria -->
+            <div class="card" style="grid-column: span 2;">
+                <div class="card-header">
+                    <h2 class="card-title"><i class="fas fa-memory"></i> Procesos (Memoria)</h2>
+                </div>
+                <table class="process-table">
+                    <thead>
+                        <tr>
+                            <th>PID</th>
+                            <th>Nombre</th>
+                            <th>Memoria %</th>
+                            <th>CPU %</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mem-processes">
+                        <!-- Los procesos se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/notifications.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+2025-06-14 15:28:41,007 - INFO - Iniciando aplicaciï¿½n...
+2025-06-14 15:28:41,008 - INFO - Iniciando Flask desde: D:\SO\backend\app.py
+2025-06-14 15:28:41,013 - INFO - Esperando que Flask se inicie...
+2025-06-14 15:28:42,052 - INFO - Plantillas en: D:\SO\backend\templates
+2025-06-16 00:57:37,259 - INFO - Iniciando aplicación...
+2025-06-16 00:57:37,261 - INFO - Iniciando Flask desde: D:\SO\backend\app.py
+2025-06-16 00:57:37,268 - INFO - Esperando que Flask se inicie...
+2025-06-16 00:57:38,169 - INFO - Plantillas en: D:\SO\backend\templates
+2025-06-16 00:57:38,169 - INFO - Archivos estticos en: D:\SO\backend\static
+2025-06-16 00:57:38,169 - INFO - * Serving Flask app 'app'
+2025-06-16 00:57:38,169 - INFO - * Debug mode: on
+2025-06-16 00:57:38,184 - ERROR - 2025-06-16 00:57:38,184 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-06-16 00:57:38,184 - ERROR - * Running on http://127.0.0.1:5000
+2025-06-16 00:57:38,184 - ERROR - 2025-06-16 00:57:38,184 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-16 00:57:38,184 - ERROR - 2025-06-16 00:57:38,184 - werkzeug - INFO -  * Restarting with stat
+2025-06-16 00:57:38,275 - INFO - Flask activo
+2025-06-16 00:57:38,275 - INFO - Cargando ventana principal...
+2025-06-16 00:57:38,833 - ERROR - 2025-06-16 00:57:38,833 - werkzeug - WARNING -  * Debugger is active!
+2025-06-16 00:57:38,841 - ERROR - 2025-06-16 00:57:38,840 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-16 00:57:41,487 - ERROR - 2025-06-16 00:57:41,487 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:41] "GET / HTTP/1.1" 200 -
+2025-06-16 00:57:41,858 - ERROR - 2025-06-16 00:57:41,858 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:41] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-16 00:57:41,860 - ERROR - 2025-06-16 00:57:41,859 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:41] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-16 00:57:41,926 - ERROR - 2025-06-16 00:57:41,925 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-16 00:57:42,159 - ERROR - 2025-06-16 00:57:42,158 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-16 00:57:55,646 - ERROR - 2025-06-16 00:57:55,645 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:55] "GET /apps_page HTTP/1.1" 200 -
+2025-06-16 00:57:55,902 - ERROR - 2025-06-16 00:57:55,902 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-16 00:57:56,017 - ERROR - 2025-06-16 00:57:56,017 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:56] "GET /static/js/apps_manager.js HTTP/1.1" 200 -
+2025-06-16 00:57:56,702 - ERROR - 2025-06-16 00:57:56,702 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:57:56] "GET /apps HTTP/1.1" 200 -
+2025-06-16 00:58:07,131 - ERROR - 2025-06-16 00:58:07,131 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:07] "GET / HTTP/1.1" 200 -
+2025-06-16 00:58:07,398 - ERROR - 2025-06-16 00:58:07,398 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-16 00:58:07,451 - ERROR - 2025-06-16 00:58:07,449 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:07] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-16 00:58:07,451 - ERROR - 2025-06-16 00:58:07,450 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:07] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-16 00:58:12,694 - ERROR - 2025-06-16 00:58:12,693 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:12] "GET /configuracion HTTP/1.1" 200 -
+2025-06-16 00:58:25,092 - ERROR - 2025-06-16 00:58:25,091 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:25] "GET / HTTP/1.1" 200 -
+2025-06-16 00:58:25,353 - ERROR - 2025-06-16 00:58:25,353 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-16 00:58:25,463 - ERROR - 2025-06-16 00:58:25,462 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:25] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-16 00:58:25,464 - ERROR - 2025-06-16 00:58:25,463 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:25] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-16 00:58:32,337 - ERROR - 2025-06-16 00:58:32,337 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:32] "GET /index.html HTTP/1.1" 200 -
+2025-06-16 00:58:32,713 - ERROR - 2025-06-16 00:58:32,713 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-16 00:58:32,730 - ERROR - 2025-06-16 00:58:32,729 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:32] "GET /static/js/notifications.js HTTP/1.1" 200 -
+2025-06-16 00:58:32,731 - ERROR - 2025-06-16 00:58:32,731 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:32] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-06-16 00:58:32,928 - ERROR - 2025-06-16 00:58:32,927 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:32] "GET /socket.io/?EIO=4&transport=polling&t=PTtKMOW HTTP/1.1" 200 -
+2025-06-16 00:58:33,066 - ERROR - 2025-06-16 00:58:33,066 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:33] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-16 00:58:33,087 - ERROR - 2025-06-16 00:58:33,086 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:33] "POST /socket.io/?EIO=4&transport=polling&t=PTtKMRa&sid=OR7UZEfVEQbCKKTiAAAA HTTP/1.1" 200 -
+2025-06-16 00:58:33,299 - ERROR - 2025-06-16 00:58:33,299 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:33] "GET /socket.io/?EIO=4&transport=polling&t=PTtKMRc&sid=OR7UZEfVEQbCKKTiAAAA HTTP/1.1" 200 -
+2025-06-16 00:58:33,307 - ERROR - 2025-06-16 00:58:33,307 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:33] "POST /socket.io/?EIO=4&transport=polling&t=PTtKMXO&sid=OR7UZEfVEQbCKKTiAAAA HTTP/1.1" 200 -
+2025-06-16 00:58:33,615 - ERROR - 2025-06-16 00:58:33,614 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:33] "GET /socket.io/?EIO=4&transport=polling&t=PTtKMXP&sid=OR7UZEfVEQbCKKTiAAAA HTTP/1.1" 200 -
+2025-06-16 00:58:37,147 - ERROR - 2025-06-16 00:58:37,147 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:37] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-16 00:58:44,175 - ERROR - 2025-06-16 00:58:44,174 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:44] "GET / HTTP/1.1" 200 -
+2025-06-16 00:58:44,220 - ERROR - 2025-06-16 00:58:44,203 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:44] "GET /socket.io/?EIO=4&transport=websocket&sid=OR7UZEfVEQbCKKTiAAAA HTTP/1.1" 200 -
+2025-06-16 00:58:44,562 - ERROR - 2025-06-16 00:58:44,562 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:44] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-16 00:58:44,564 - ERROR - 2025-06-16 00:58:44,563 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:44] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-16 00:58:44,566 - ERROR - 2025-06-16 00:58:44,565 - werkzeug - INFO - 127.0.0.1 - - [16/Jun/2025 00:58:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-16 01:03:45,993 - INFO - Aplicación finalizada.

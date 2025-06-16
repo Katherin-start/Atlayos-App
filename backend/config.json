@@ -1,0 +1,7 @@
+{
+    "intervalo": 5,
+    "cpu_threshold": 80,
+    "ram_threshold": 75,
+    "notificaciones": "on",
+    "tema": "light"
+}
