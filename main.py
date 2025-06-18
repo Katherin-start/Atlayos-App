@@ -1,62 +1,25 @@
-import subprocess
-import time
-import socket
-import sys
-import os
+from flask import Flask, render_template
+from flask_socketio import SocketIO
 import logging
-from pathlib import Path
 
 # Configurar logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler()
-    ]
 )
-logger = logging.getLogger(__name__)
 
-def resource_path(relative_path):
-    """Devuelve la ruta absoluta para entorno de ejecución."""
-    base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
-    return os.path.join(base_path, relative_path)
+app = Flask(__name__)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
-def run_flask():
-    try:
-        ruta_app = resource_path(os.path.join("backend", "app.py"))
-        logger.info(f"Iniciando Flask desde: {ruta_app}")
+@app.route('/')
+def index():
+    return "¡Hola desde Flask desplegado en Render sin WebView!"
 
-        if not os.path.exists(ruta_app):
-            logger.error(f"Archivo app.py no encontrado: {ruta_app}")
-            return False
-
-        command = [sys.executable, ruta_app]
-        subprocess.Popen(command)
-        return True
-
-    except Exception as e:
-        logger.error(f"Error al iniciar Flask: {e}")
-        return False
-
-def wait_for_flask(port=5000, timeout=30):
-    logger.info("Esperando que Flask se inicie...")
-    start = time.time()
-    while time.time() - start < timeout:
-        try:
-            with socket.create_connection(("localhost", port), timeout=1):
-                logger.info("Flask activo")
-                return True
-        except:
-            time.sleep(0.5)
-    return False
+@socketio.on('mensaje')
+def handle_mensaje(data):
+    logging.info(f"Mensaje recibido: {data}")
+    # Aquí puedes procesar el mensaje, emitir, guardar, etc.
 
 if __name__ == '__main__':
-    logger.info("Iniciando aplicación...")
-
-    if run_flask():
-        if wait_for_flask():
-            logger.info("Servidor Flask activo")
-        else:
-            logger.error("Flask no respondió a tiempo")
-    else:
-        logger.error("No se pudo iniciar Flask")
+    logging.info("Iniciando aplicación Flask con SocketIO...")
+    socketio.run(app, host='0.0.0.0', port=5000)
