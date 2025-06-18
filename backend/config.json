@@ -1,7 +1,8 @@
 {
-    "intervalo": 5,
-    "cpu_threshold": 80,
+    "intervalo": 27,
+    "cpu_threshold": 73,
     "ram_threshold": 75,
     "notificaciones": "on",
-    "tema": "light"
+    "tema": "light",
+    "twofa": "on"
 }

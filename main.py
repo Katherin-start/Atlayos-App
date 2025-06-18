@@ -21,20 +21,16 @@ logger = logging.getLogger(__name__)
 
 def resource_path(relative_path):
     """Devuelve la ruta absoluta compatible con PyInstaller."""
-    try:
-        base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
-        full_path = os.path.join(base_path, relative_path)
+    base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
+    full_path = os.path.join(base_path, relative_path)
 
-        if not os.path.exists(full_path):
-            logger.warning(f"No encontrado: {full_path}. Probando ruta de desarrollo...")
-            dev_path = os.path.join(os.path.abspath("."), relative_path)
-            if os.path.exists(dev_path):
-                return dev_path
+    if not os.path.exists(full_path):
+        logger.warning(f"No encontrado: {full_path}. Probando ruta de desarrollo...")
+        dev_path = os.path.join(os.path.abspath("."), relative_path)
+        if os.path.exists(dev_path):
+            return dev_path
 
-        return full_path
-    except Exception as e:
-        logger.error(f"Error en resource_path: {str(e)}")
-        return os.path.join(os.path.abspath("."), relative_path)
+    return full_path
 
 def run_flask():
     try:
@@ -56,17 +52,32 @@ def run_flask():
         )
 
         # Capturar la salida para log
-        def log_output(pipe, log_method):
-            for line in iter(pipe.readline, b''):
-                log_method(line.decode(errors='ignore').strip())
-
-        threading.Thread(target=log_output, args=(process.stdout, logger.info), daemon=True).start()
-        threading.Thread(target=log_output, args=(process.stderr, logger.error), daemon=True).start()
-
-        return True
     except Exception as e:
-        logger.error(f"Fallo al iniciar Flask: {str(e)}")
+        logger.error(f"Error al iniciar Flask: {e}")
         return False
+# ...existing code...
+
+    def log_output(pipe, log_method, is_stderr=False):
+        for line in iter(pipe.readline, b''):
+            decoded = line.decode(errors='ignore').strip()
+            if is_stderr:
+                if "WARNING" in decoded:
+                    logger.warning(decoded)
+                elif "INFO" in decoded:
+                    logger.info(decoded)
+                elif "ERROR" in decoded or "Traceback" in decoded:
+                    logger.error(decoded)
+                else:
+                    logger.warning(decoded)
+            else:
+                log_method(decoded)
+
+    # ...en tu función run_flask, reemplaza los hilos así:
+    threading.Thread(target=log_output, args=(process.stdout, logger.info, False), daemon=True).start()
+    threading.Thread(target=log_output, args=(process.stderr, logger.error, True), daemon=True).start()
+    return process
+
+# ...existing code...
 
 def wait_for_flask(port=5000, timeout=30):
     logger.info("Esperando que Flask se inicie...")
