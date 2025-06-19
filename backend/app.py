@@ -1,3 +1,6 @@
+import eventlet
+eventlet.monkey_patch()
+
 from flask import Flask, render_template, jsonify, send_from_directory, request, redirect, url_for, flash
 from flask_socketio import SocketIO, emit
 from system_info import get_system_info, kill_process, get_system_model, get_os_info
