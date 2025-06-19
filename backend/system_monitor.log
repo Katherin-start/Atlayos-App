@@ -2985,3 +2985,87 @@
 2025-06-16 01:04:05,128 - werkzeug - INFO -  * Restarting with stat
 2025-06-16 01:04:05,962 - werkzeug - WARNING -  * Debugger is active!
 2025-06-16 01:04:05,988 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-18 13:36:17,076 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 13:36:17,077 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 13:36:17,077 - werkzeug - INFO -  * Restarting with stat
+2025-06-18 13:36:17,864 - werkzeug - WARNING -  * Debugger is active!
+2025-06-18 13:36:17,868 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-18 13:38:28,363 - werkzeug - INFO -  * Detected change in 'D:\\SO\\backend\\app.py', reloading
+2025-06-18 13:38:28,461 - werkzeug - INFO -  * Restarting with stat
+2025-06-18 13:38:30,282 - werkzeug - WARNING -  * Debugger is active!
+2025-06-18 13:38:30,286 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-18 13:38:47,613 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-18 13:38:47,613 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-18 13:38:47,613 - werkzeug - INFO -  * Restarting with stat
+2025-06-18 13:38:48,398 - werkzeug - WARNING -  * Debugger is active!
+2025-06-18 13:38:48,401 - werkzeug - INFO -  * Debugger PIN: 202-728-868
+2025-06-18 13:39:02,095 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:02] "GET / HTTP/1.1" 200 -
+2025-06-18 13:39:02,209 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:02] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:39:02,256 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:02] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:39:02,279 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:39:03,136 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-18 13:39:14,479 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "GET /index.html HTTP/1.1" 200 -
+2025-06-18 13:39:14,564 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-06-18 13:39:14,565 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:39:14,565 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "[36mGET /static/js/notifications.js HTTP/1.1[0m" 304 -
+2025-06-18 13:39:14,702 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "GET /socket.io/?EIO=4&transport=polling&t=PU4Ley0 HTTP/1.1" 200 -
+2025-06-18 13:39:14,765 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-18 13:39:14,780 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "POST /socket.io/?EIO=4&transport=polling&t=PU4Ley_&sid=CVa-pxFA1mCcts2JAAAA HTTP/1.1" 200 -
+2025-06-18 13:39:14,811 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "GET /socket.io/?EIO=4&transport=polling&t=PU4Lez0&sid=CVa-pxFA1mCcts2JAAAA HTTP/1.1" 200 -
+2025-06-18 13:39:14,827 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:14] "GET /socket.io/?EIO=4&transport=polling&t=PU4Lezz&sid=CVa-pxFA1mCcts2JAAAA HTTP/1.1" 200 -
+2025-06-18 13:39:22,888 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:22] "[33mGET /static/sounds/alert.mp3 HTTP/1.1[0m" 404 -
+2025-06-18 13:39:26,332 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:26] "GET /socket.io/?EIO=4&transport=websocket&sid=CVa-pxFA1mCcts2JAAAA HTTP/1.1" 200 -
+2025-06-18 13:39:26,363 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:26] "GET / HTTP/1.1" 200 -
+2025-06-18 13:39:26,460 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:26] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:39:26,461 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:26] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:39:26,463 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:39:31,468 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:31] "GET /apps_page HTTP/1.1" 200 -
+2025-06-18 13:39:31,515 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:39:31,539 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:31] "[36mGET /static/js/apps_manager.js HTTP/1.1[0m" 304 -
+2025-06-18 13:39:32,304 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:39:32] "GET /apps HTTP/1.1" 200 -
+2025-06-18 13:40:23,617 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:23] "GET / HTTP/1.1" 200 -
+2025-06-18 13:40:23,652 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:40:23,705 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:23] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:40:23,706 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:23] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:40:28,080 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:28] "GET /configuracion HTTP/1.1" 200 -
+2025-06-18 13:40:30,504 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:30] "GET / HTTP/1.1" 200 -
+2025-06-18 13:40:30,597 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:30] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:40:30,599 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:40:30,611 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:30] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:40:37,233 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:40:37,237 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:40:44,236 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:44] "GET /configuracion HTTP/1.1" 200 -
+2025-06-18 13:40:44,330 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:40:53,466 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:53] "GET / HTTP/1.1" 200 -
+2025-06-18 13:40:53,575 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:40:53,685 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:40:53,719 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:53] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:40:53,843 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:53] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:40:58,589 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "GET /index.html HTTP/1.1" 200 -
+2025-06-18 13:40:58,620 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:40:58,669 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:40:58,699 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "[36mGET /static/js/notifications.js HTTP/1.1[0m" 304 -
+2025-06-18 13:40:58,699 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-06-18 13:40:58,776 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "GET /socket.io/?EIO=4&transport=polling&t=PU4M2Lj HTTP/1.1" 200 -
+2025-06-18 13:40:58,878 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "GET /api/system-info HTTP/1.1" 200 -
+2025-06-18 13:40:58,915 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "POST /socket.io/?EIO=4&transport=polling&t=PU4M2Nt&sid=u4fGY1V8SZ5L4SARAAAC HTTP/1.1" 200 -
+2025-06-18 13:40:58,930 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:40:58] "GET /socket.io/?EIO=4&transport=polling&t=PU4M2N-&sid=u4fGY1V8SZ5L4SARAAAC HTTP/1.1" 200 -
+2025-06-18 13:41:08,237 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "GET /socket.io/?EIO=4&transport=websocket&sid=u4fGY1V8SZ5L4SARAAAC HTTP/1.1" 200 -
+2025-06-18 13:41:08,256 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "GET / HTTP/1.1" 200 -
+2025-06-18 13:41:08,311 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:41:08,343 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:41:08,359 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:41:08,374 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:08] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -
+2025-06-18 13:41:15,891 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:15] "GET /apps_page HTTP/1.1" 200 -
+2025-06-18 13:41:15,953 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:41:15,980 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:41:16,001 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:16] "[36mGET /static/js/apps_manager.js HTTP/1.1[0m" 304 -
+2025-06-18 13:41:16,482 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:16] "GET /apps HTTP/1.1" 200 -
+2025-06-18 13:41:33,639 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:33] "GET /apps HTTP/1.1" 200 -
+2025-06-18 13:41:34,775 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:34] "GET / HTTP/1.1" 200 -
+2025-06-18 13:41:34,837 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-18 13:41:34,848 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-18 13:41:34,900 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:34] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-06-18 13:41:34,900 - werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 13:41:34] "[33mGET /static/js/app.js HTTP/1.1[0m" 404 -

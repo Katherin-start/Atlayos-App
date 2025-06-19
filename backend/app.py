@@ -10,38 +10,39 @@ import os
 import socket
 import json
 import sys
+import atexit
+import eventlet
 
-# Utilidad para compatibilidad con PyInstaller
+# --- Función para compatibilidad con PyInstaller ---
 def resource_path(relative_path):
     base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
     return os.path.join(base_path, relative_path)
 
-# Configuración de rutas relativas
+# --- Rutas base ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = resource_path(os.path.join("backend", "templates"))
 STATIC_DIR = resource_path(os.path.join("backend", "static"))
 CONFIG_PATH = resource_path(os.path.join("backend", "config.json"))
 
-# Configuración de la aplicación Flask
-app = Flask(__name__,
-            template_folder=TEMPLATE_DIR,
-            static_folder=STATIC_DIR)
-app.config['SECRET_KEY'] = 'clave_super_secreta'
-socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Variables globales
+# --- Flask App ---
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
+app.config['SECRET_KEY'] = 'clave_super_secreta'
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+
+# --- Variables globales ---
 monitoring_active = False
 alert_history = []
 apps_manager = AppsManager()
 
-# Funciones de configuración
+# --- Carga y guarda configuración ---
 def cargar_config():
     if os.path.exists(CONFIG_PATH):
         try:
             with open(CONFIG_PATH, 'r') as f:
                 return json.load(f)
         except json.JSONDecodeError:
-            print("El archivo de configuración está vacío o tiene formato inválido. Usando valores por defecto.")
+            print("⚠️ Configuración inválida. Usando valores por defecto.")
     return {
         "intervalo": 5,
         "cpu_threshold": 80,
@@ -55,7 +56,7 @@ def guardar_config(data):
     with open(CONFIG_PATH, 'w') as f:
         json.dump(data, f, indent=4)
 
-# Funciones del sistema
+# --- Funciones del sistema ---
 def get_architecture():
     return platform.machine()
 
@@ -65,13 +66,24 @@ def get_system_version():
 def monitor_system():
     global monitoring_active
     config = cargar_config()
+
+    print("[INFO] Iniciando monitoreo del sistema...")
+
     while monitoring_active:
-        system_data = get_system_info()
-        system_data['hostname'] = socket.gethostname()
-        system_data['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        socketio.emit('system_update', system_data)
-        check_for_alerts(system_data, config)
-        time.sleep(config.get('intervalo', 5))
+        try:
+            system_data = get_system_info()
+            system_data['hostname'] = socket.gethostname()
+            system_data['timestamp'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            socketio.emit('system_update', system_data)
+            check_for_alerts(system_data, config)
+
+            intervalo = config.get('intervalo', 5)
+            time.sleep(max(1, intervalo))  # mínimo 1 segundo
+        except Exception as e:
+            print(f"[ERROR] monitor_system: {e}")
+            time.sleep(5)  # Espera antes de reintentar
+
 
 def check_for_alerts(system_data, config):
     alerts = []
@@ -112,18 +124,18 @@ def check_for_alerts(system_data, config):
         alert_history.extend(alerts)
         socketio.emit('new_alerts', alerts[-3:])
 
-# Rutas de la aplicación
+# --- Rutas ---
 @app.route('/')
 def menu():
     return render_template('menu.html')
 
 @app.route('/index.html')
 def index():
-    return render_template('index.html', 
-                         system_model=get_system_model(),
-                         os_info=get_os_info(),
-                         architecture=get_architecture(),
-                         version=get_system_version())
+    return render_template('index.html',
+                           system_model=get_system_model(),
+                           os_info=get_os_info(),
+                           architecture=get_architecture(),
+                           version=get_system_version())
 
 @app.route('/configuracion', methods=['GET', 'POST'])
 def configuracion():
@@ -165,9 +177,9 @@ def uninstall_app(app_name):
     try:
         result = apps_manager.uninstall_app(app_name)
         message = result.get("message", f"No se pudo desinstalar {app_name}")
-        return jsonify({ 'success': result.get("success", False), 'message': message })
+        return jsonify({'success': result.get("success", False), 'message': message})
     except Exception as e:
-        return jsonify({ 'success': False, 'message': f"Error al desinstalar: {str(e)}" }), 500
+        return jsonify({'success': False, 'message': f"Error al desinstalar: {str(e)}"}), 500
 
 @app.route('/apps-view')
 def apps_view():
@@ -177,7 +189,7 @@ def apps_view():
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
-                             'favicon.ico', mimetype='image/vnd.microsoft.icon')
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/api/system-info')
 def system_info():
@@ -194,7 +206,7 @@ def system_info():
 def get_recent_alerts():
     return jsonify({'alerts': alert_history[-10:]})
 
-# WebSocket Handlers
+# --- WebSocket Handlers ---
 @socketio.on('start_monitoring')
 def handle_start_monitoring():
     global monitoring_active
@@ -228,14 +240,30 @@ def handle_apps_list_request():
             'message': str(e)
         })
 
+# --- Finalización segura ---
+@atexit.register
+def goodbye():
+    print(">>> Flask detenido")
+
+# --- Ejecutar la app ---
+# --- Ejecutar la app ---
+# --- Ejecutar la app ---
 if __name__ == '__main__':
-    print(f"Plantillas en: {TEMPLATE_DIR}")
-    print(f"Archivos estáticos en: {STATIC_DIR}")
+    import eventlet
+    eventlet.monkey_patch()
+
+    TEMPLATE_DIR = resource_path(os.path.join("backend", "templates"))
+    STATIC_DIR = resource_path(os.path.join("backend", "static"))
+
+    print(f"[INFO] Plantillas en: {TEMPLATE_DIR}")
+    print(f"[INFO] Archivos estáticos en: {STATIC_DIR}")
 
     if not os.path.exists(TEMPLATE_DIR):
-        print(f"❌ Error: No se encontró la carpeta de plantillas en {TEMPLATE_DIR}")
+        print(f"[ERROR] No se encontró la carpeta de plantillas en {TEMPLATE_DIR}")
+        sys.exit(1)
     if not os.path.exists(STATIC_DIR):
-        print(f"⚠️ Advertencia: No se encontró la carpeta static en {STATIC_DIR}")
+        print(f"[WARNING] No se encontró la carpeta static en {STATIC_DIR}")
 
-    debug_mode = not hasattr(sys, 'frozen')
-    socketio.run(app, debug=debug_mode, host='127.0.0.1', port=5000)
+    debug_mode = not hasattr(sys, 'frozen')  # False si está empaquetado
+
+    socketio.run(app, host='0.0.0.0', port=5000)
