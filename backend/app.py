@@ -146,6 +146,16 @@ def index():
                            version=get_system_version(),
                            detected_os=get_detected_os())
 
+@app.route('/apps_page')
+def apps_page():
+    try:
+        apps = apps_manager.get_installed_apps()
+        return render_template('apps.html', apps=apps)
+    except Exception as e:
+        print(f"[ERROR] apps_page: {e}")
+        return render_template('apps.html', apps=[])
+    
+
 @app.route('/configuracion', methods=['GET', 'POST'])
 def configuracion():
     if request.method == 'POST':
