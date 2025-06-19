@@ -7,7 +7,6 @@ import json
 import shutil
 from typing import List, Dict, Union, Optional
 
-# Importación condicional de winreg
 if platform.system() == "Windows":
     import winreg
 else:
@@ -30,9 +29,6 @@ class AppsManager:
             app['size_mb'] = app.get('size', 0) // (1024 * 1024)
         return apps
 
-    def get_largest_apps(self, threshold_mb: int = 1024) -> List[Dict[str, Union[str, int]]]:
-        return [app for app in self.get_installed_apps() if app.get("size_mb", 0) > threshold_mb]
-
     def uninstall_app(self, app_name: str) -> dict:
         if self.system == "Windows":
             return self._uninstall_windows_app(app_name)
@@ -41,6 +37,28 @@ class AppsManager:
         elif self.system == "Darwin":
             return self._uninstall_macos_app(app_name)
         return {"success": False, "message": "Sistema operativo no soportado para desinstalación."}
+
+    def clean_app_cache(self, app_name: str) -> dict:
+        try:
+            if self.system == "Windows":
+                temp_path = os.getenv('TEMP', '')
+            elif self.system == "Linux" or self.system == "Darwin":
+                temp_path = "/tmp"
+            else:
+                return {"success": False, "message": "Sistema no soportado"}
+
+            deleted_files = 0
+            for root, dirs, files in os.walk(temp_path):
+                for file in files:
+                    if app_name.lower() in file.lower():
+                        try:
+                            os.remove(os.path.join(root, file))
+                            deleted_files += 1
+                        except:
+                            continue
+            return {"success": True, "message": f"{deleted_files} archivos eliminados del caché de {app_name}"}
+        except Exception as e:
+            return {"success": False, "message": str(e)}
 
     def _get_windows_apps(self) -> List[Dict[str, Union[str, int]]]:
         if not winreg:
@@ -112,7 +130,16 @@ class AppsManager:
         return apps
 
     def _uninstall_windows_app(self, app_name: str) -> Dict[str, Union[bool, str]]:
-        return {"success": False, "message": "Función de desinstalación para Windows no implementada."}
+        try:
+            cmd = [
+                "powershell",
+                "-Command",
+                f"Get-WmiObject -Class Win32_Product | Where-Object {{$_.Name -eq \"{app_name}\"}} | ForEach-Object {{$_.Uninstall()}}"
+            ]
+            subprocess.run(cmd, check=True)
+            return {"success": True, "message": f"{app_name} desinstalado correctamente."}
+        except Exception as e:
+            return {"success": False, "message": str(e)}
 
     def _get_linux_apps(self) -> List[Dict[str, Union[str, int]]]:
         apps = []
