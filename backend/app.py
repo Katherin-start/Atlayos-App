@@ -1,3 +1,6 @@
+import eventlet
+eventlet.monkey_patch()
+
 from flask import Flask, render_template, jsonify, send_from_directory, request, redirect, url_for, flash
 from flask_socketio import SocketIO, emit
 from system_info import get_system_info, kill_process, get_system_model, get_os_info
@@ -11,7 +14,6 @@ import socket
 import json
 import sys
 import atexit
-import eventlet
 
 # --- Función para compatibilidad con PyInstaller ---
 def resource_path(relative_path):
@@ -24,11 +26,10 @@ TEMPLATE_DIR = resource_path(os.path.join("backend", "templates"))
 STATIC_DIR = resource_path(os.path.join("backend", "static"))
 CONFIG_PATH = resource_path(os.path.join("backend", "config.json"))
 
-
 # --- Flask App ---
 app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 app.config['SECRET_KEY'] = 'clave_super_secreta'
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
 # --- Variables globales ---
 monitoring_active = False
@@ -66,9 +67,7 @@ def get_system_version():
 def monitor_system():
     global monitoring_active
     config = cargar_config()
-
     print("[INFO] Iniciando monitoreo del sistema...")
-
     while monitoring_active:
         try:
             system_data = get_system_info()
@@ -83,7 +82,6 @@ def monitor_system():
         except Exception as e:
             print(f"[ERROR] monitor_system: {e}")
             time.sleep(5)  # Espera antes de reintentar
-
 
 def check_for_alerts(system_data, config):
     alerts = []
@@ -246,12 +244,7 @@ def goodbye():
     print(">>> Flask detenido")
 
 # --- Ejecutar la app ---
-# --- Ejecutar la app ---
-# --- Ejecutar la app ---
 if __name__ == '__main__':
-    import eventlet
-    eventlet.monkey_patch()
-
     TEMPLATE_DIR = resource_path(os.path.join("backend", "templates"))
     STATIC_DIR = resource_path(os.path.join("backend", "static"))
 
@@ -266,5 +259,4 @@ if __name__ == '__main__':
 
     debug_mode = not hasattr(sys, 'frozen')  # False si está empaquetado
 
-socketio.run(app, host='0.0.0.0', port=5000, allow_unsafe_werkzeug=True)
-
+    socketio.run(app, host='0.0.0.0', port=5000, allow_unsafe_werkzeug=True)
